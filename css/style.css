@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #ffe6f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 32px;
+    text-align: center;
+}
+h1 {
+    color: #d72660;
+}
+.pdf-list {
+    margin-top: 32px;
+    text-align: left;
+}
+.pdf-list a {
+    display: block;
+    margin-bottom: 16px;
+    color: #d72660;
+    text-decoration: none;
+    font-weight: bold;
+}
+.pdf-list a:hover {
+    text-decoration: underline;
+}
+.heart {
+    font-size: 48px;
+    color: #d72660;
+    margin-bottom: 16px;
+}
+.heart-anim {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: #d72660;
+    z-index: 9999;
+    animation: heartbeat 1s infinite;
+}
+.pdf-viewer {
+    margin-top: 32px;
+    width: 100%;
+    min-height: 500px;
+    display: none;
+}
+.pdf-viewer iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+#close-pdf {
+    background: #d72660;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#close-pdf:hover {
+    background: #a81c47;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    10%, 30% { transform: translate(-50%, -50%) scale(1.2); }
+    20%, 40% { transform: translate(-50%, -50%) scale(0.95); }
+    50%, 60% { transform: translate(-50%, -50%) scale(1.1); }
+    70%, 90% { transform: translate(-50%, -50%) scale(1); }
+}
